@@ -1,6 +1,7 @@
 package example
 
-import World._
+import Database._
+import Repositories._
 
 object App {
   def main(args: Array[String]) {
@@ -8,7 +9,7 @@ object App {
 
     Database.startDatabaseSession
     Database.createSchema
-    Database.addUser("Simon", "simon.andreux@gmail.com")
+    UserRepository.addUser("Simon", "simon.andreux@gmail.com")
 
     print("Goodbye, folks !!")
   }
